@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon --watch src/core/server src/core/server",
     "nowp": "nodemon --watch src/core/server src/core/server -wp false",
-    "pack": "/bin/bash ./utils/pack_and_push.sh"
+    "pack": "/bin/bash ./utils/pack_and_push.sh",
+    "prod_test": "/bin/bash ./utils/prod_and_push.sh"
   },
   "author": "taogoat",
   "repository": "https://github.com/taogoat/benchmark",
