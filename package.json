@@ -9,12 +9,12 @@
     "pack": "/bin/bash ./utils/pack_and_push.sh"
   },
   "author": "taogoat",
+  "repository": "https://github.com/taogoat/benchmark",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.1",
     "cookie-parser": "^1.4.3",
     "express": "^4.14.1",
-    "file-loader": "^0.10.1",
     "serve-favicon": "^2.4.1"
   },
   "devDependencies": {
