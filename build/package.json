@@ -1,0 +1,27 @@
+{
+  "name": "heroku-shell-taogoat-dev-framework",
+  "version": "1.0.0",
+  "description": "Benchmark Project",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taogoat/benchmark.git"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "benchmark"
+  ],
+  "author": "taogoat",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/taogoat/benchmark/issues"
+  },
+  "homepage": "https://github.com/taogoat/benchmark#readme",
+  "dependencies": {
+    "express": "^4.14.1"
+  }
+}
