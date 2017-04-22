@@ -9,7 +9,7 @@ module.exports = {
 
   output: {
     path: __dirname + '/src/public/',
-    filename: 'index.js',
+    filename: 'app.js',
     publicPath: '',
   },
 
@@ -18,30 +18,14 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.vue$/,
-      loader: 'vue-loader',
-    },      {
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-    },{
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
-      loader: 'url-loader'
-    },{
-      test: /\.(jpg|png)$/,
-      loader: 'url-loader'
+      test: /\.svg$/,
+      loader: 'raw-loader'
     },{
       test: /\.css$/,
       loader: 'css-loader'
     },{
-      test: /\.svg$/,
-      loader: 'raw-loader'
-    },{
       test: /\.html$/,
       loader: 'raw-loader'
-    },{
-      test: /\.json$/,
-      loader: 'json-loader'
     }]
   },
   plugins: [
@@ -53,5 +37,5 @@ module.exports = {
         CLIENT: JSON.stringify(true)
       }
     })
-  ]
+  ],
 }

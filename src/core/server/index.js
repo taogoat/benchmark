@@ -1,21 +1,18 @@
 'use strict'
 
 var express = require('express')
-var bodyParser = require('body-parser')
-var cookieParser = require('cookie-parser')
-var favicon = require('serve-favicon')
 var app = express()
-app.use(bodyParser.json({ limit: '20mb' }));
-app.use(express.static(__dirname + '/assets'))
-//app.use(favicon(__dirname + '/icon.png'))
+app.use(express.static('public'))
 
 // heroku positive port assignment
 var port = process.env.PORT || 5000
 
 // ------   <--this part gets cut from final version--> //slice
 // check for wp flag //slice
-var wp; if(process.argv.indexOf('-wp') != -1){wp = process.argv[process.argv.indexOf('-wp') + 1]} //slice
-if (!wp || wp=='true'){app = require('./webpack.index.js').pack(app)}
+var wp; //slice
+if(process.argv.indexOf('-wp') != -1) //slice
+{wp = process.argv[process.argv.indexOf('-wp') + 1]} //slice
+if (!wp || wp=='true'){app = require('./webpack.index.js').pack(app)} //slice
 else{console.log('Serving from express')} //slice
 // ------ //slice
 

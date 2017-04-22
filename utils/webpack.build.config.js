@@ -1,12 +1,12 @@
 var webpack = require('webpack')
-var cssPlugin = require('extract-text-webpack-plugin')
+var path = require('path')
 
 module.exports = {
   entry: './src/core/client/index.js',
 
   output: {
-    path: './build/public/',
-    filename: 'index.js',
+    path: path.resolve(__dirname, '../build/public'),
+    filename: 'app.js',
     publicPath: '/public/',
   },
 
@@ -15,34 +15,14 @@ module.exports = {
   },
   module: {
     loaders: [{
-      test: /\.vue$/,
-      loader: 'vue-loader',
-    },{
-      test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-    },{
-      test: /\.(eot|svg|ttf|woff|woff2)$/,
-      loader: 'url-loader'
-    },{
-      test: /\.(jpg|png)$/,
-      loader: 'url-loader'
-    },{
-      test: /\.css$/,
-      loader: 'css-loader'
-    },{
       test: /\.svg$/,
       loader: 'raw-loader'
     },{
       test: /\.html$/,
       loader: 'raw-loader'
-    },{
-      test: /\.json$/,
-      loader: 'json-loader'
     }]
   },
   plugins: [
-    new cssPlugin('[name].css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.DefinePlugin({
