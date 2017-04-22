@@ -10,7 +10,7 @@ function spin(timestamp){
   progress = Math.min(progress, 1)
   var xy = 32-(32*progress)
   var rotated = (1080*progress)
-  var trans = 'translate('+xy+','+xy+')scale('+progress+')rotate('+rotated+',32,32)'
+  var trans = 'translate('+xy+','+xy+',0)scale('+progress+')rotate('+rotated+',32,32)'
   var targ = document.getElementById('taijitu')
   targ.setAttribute("transform", trans)
     if (progress < 1) {
