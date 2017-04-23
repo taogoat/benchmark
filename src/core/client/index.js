@@ -1,3 +1,5 @@
+require('./index.css')
+
 var start = null
 var unstart = null
 function spin(timestamp){
