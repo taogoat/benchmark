@@ -22,7 +22,7 @@ module.exports = {
       loader: 'raw-loader'
     },{
       test: /\.css$/,
-      loader: 'css-loader'
+      loader: 'style-loader!css-loader'
     },{
       test: /\.html$/,
       loader: 'raw-loader'
