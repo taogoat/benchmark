@@ -39,4 +39,8 @@ function unspin(timestamp){
     }
     else{start = null; requestAnimationFrame(spin)}
 }
+<<<<<<< HEAD
 //window.requestAnimationFrame(spin)
+=======
+//window.requestAnimationFrame(spin)
+>>>>>>> css
