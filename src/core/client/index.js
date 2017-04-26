@@ -1,3 +1,4 @@
+require('./index.css')
 var start = null
 var unstart = null
 function spin(timestamp){
@@ -38,4 +39,4 @@ function unspin(timestamp){
     }
     else{start = null; requestAnimationFrame(spin)}
 }
-window.requestAnimationFrame(spin)
+//window.requestAnimationFrame(spin)
