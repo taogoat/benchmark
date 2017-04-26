@@ -1,4 +1,6 @@
+'use strict'
 require('./index.css')
+
 var start = null
 var unstart = null
 function spin(timestamp){
@@ -39,8 +41,5 @@ function unspin(timestamp){
     }
     else{start = null; requestAnimationFrame(spin)}
 }
-<<<<<<< HEAD
-//window.requestAnimationFrame(spin)
-=======
-//window.requestAnimationFrame(spin)
->>>>>>> css
+
+// window.requestAnimationFrame(spin)
